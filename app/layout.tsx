@@ -1,19 +1,21 @@
 import type { Metadata } from 'next';
+import Navbar from '@/components/Navbar';
 import './globals.css';
 
 export const metadata: Metadata = {
   title: 'Hello World App',
-  description: 'A simple Next.js application displaying Hello World',
+  description: 'A simple hello world application',
 };
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
-}): React.ReactElement {
+}) {
   return (
     <html lang="en">
-      <body className="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen">
+      <body>
+        <Navbar />
         {children}
       </body>
     </html>
